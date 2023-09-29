@@ -9,6 +9,8 @@ exceed the limit, and you need to adjust the design to reduce the RF noise, the
 first thing you will want to know is whether the noise is primarily "common mode"
 or "differential mode". The LISN-mate is a tool that tells you that.
 
+![LISN-mate PCB](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_1.jpg)
+
 When you want a quantitative value for the common mode noise and/or the differential
 mode noise, a LISN-mate is actually somewhat involved. However, for the qualitative
 answer of whether emissions are *primarily* common more or differential mode, all
@@ -23,6 +25,8 @@ The design is in KiCAD. Gerber files for the PCB are provided as well. The compo
 
 The case is 3D printed; an STL file is provided. The design is in OpenSCAD (and
 provided as well).
+
+![LISN-mate case](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_4.jpg)
 
 ## License
 
