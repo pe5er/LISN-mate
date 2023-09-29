@@ -23,6 +23,11 @@ The design is in KiCAD. Gerber files for the PCB are provided as well. The compo
 | ADT1-6T     | Mini-Circuits | RF Transformer 50 Ohm, 30 kHz - 125 MHz |
 | 132289      | Amphenol      | SMA receptable, edge-mount              |
 
+Since the case is in plastic, and therefore not shielded, I added a shield from
+copper foil. It is soldered onto the SMA connectors.
+
+![LISN-mate PCB](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_2.jpg)
+
 The case is 3D printed; an STL file is provided. The design is in OpenSCAD (and
 provided as well).
 
