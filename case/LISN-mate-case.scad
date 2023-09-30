@@ -5,9 +5,9 @@
 
    You are free to:
 
-      Share —  copy and redistribute the material in any medium or format
+      Share - copy and redistribute the material in any medium or format
 
-      Adapt — remix, transform, and build upon the material
+      Adapt - remix, transform, and build upon the material
 
       The licensor cannot revoke these freedoms as long as you follow the
       license terms.
@@ -104,14 +104,15 @@ module bottom_shell() {
 
       /* connector supports (rounded part in subtracted below) */
       stud_size = SMA_Diameter - 0.2;
+      stud_height = height_ext/2 - SMA_Diameter/4;
       translate([-SMA_Spacing/2 - stud_size/2, -(Width/2 + WallSize), 0])
-        chamferCube([stud_size, WallSize + epsilon, height_ext/2], [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
+        chamferCube([stud_size, WallSize + epsilon, stud_height], [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
       translate([SMA_Spacing/2 - stud_size/2, -(Width/2 + WallSize), 0])
-        chamferCube([stud_size, WallSize + epsilon, height_ext/2], [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
+        chamferCube([stud_size, WallSize + epsilon, stud_height], [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
       translate([-SMA_Spacing/2 - stud_size/2, Width/2 - epsilon, 0])
-        chamferCube([stud_size, WallSize + epsilon, height_ext/2], [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
+        chamferCube([stud_size, WallSize + epsilon, stud_height], [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
       translate([SMA_Spacing/2 - stud_size/2, Width/2 - epsilon, 0])
-        chamferCube([stud_size, WallSize + epsilon, height_ext/2], [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
+        chamferCube([stud_size, WallSize + epsilon, stud_height], [[0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]], Chamfer);
     }
 
     tube_length = Width + 2*(WallSize + epsilon);
