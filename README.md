@@ -18,10 +18,11 @@ it takes is a transformer.
 
 The design is in KiCAD. Gerber files for the PCB are provided as well. The components are:
 
-| Part number | Manufacturer  | Description                             |
-| ----------- | ------------- | --------------------------------------- |
-| ADT1-6T     | Mini-Circuits | RF Transformer 50 Ohm, 30 kHz - 125 MHz |
-| 132289      | Amphenol      | SMA receptable, edge-mount              |
+| Number | Part number | Manufacturer  | Description                             |
+| ------ | ----------- | ------------- | --------------------------------------- |
+|  1     | ADT1-6T     | Mini-Circuits | RF Transformer 50 Ohm, 30 kHz - 125 MHz |
+|  4     | 132289      | Amphenol      | SMA receptable, edge-mount              |
+|  1     | 4607        | Adafruit      | Copper foil, 0.1 mm thick               |
 
 Since the case is in plastic, and therefore not shielded, I added a shield from
 copper foil. It is soldered onto the SMA connectors.
@@ -35,7 +36,7 @@ provided as well).
 
 ## License
 
-The LISN-mate is distributed under the CC BY-SA 4.0 license (Attribution-ShareAlike 4.0 International).
+The LISN-mate is distributed under the CC BY-NC-SA 4.0 license (Attribution-NonCommercial-ShareAlike 4.0 International).
 
 You are free to:
 
