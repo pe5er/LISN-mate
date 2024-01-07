@@ -12,9 +12,11 @@ or "differential mode". The LISN-mate is a tool that tells you that.
 ![LISN-mate PCB](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_1.jpg)
 
 When you want a quantitative value for the common mode noise and/or the differential
-mode noise, a LISN-mate is actually somewhat involved. However, for the qualitative
-answer of whether emissions are *primarily* common more or differential mode, all
-it takes is a transformer.
+mode noise (in dB&micro;V), a LISN-mate is actually somewhat complex circuit. 
+However, there is just a single limit for conducted emissions in the EMC/EMI standards,
+so you do not really need the absolute values. What you need to know, whether the emissions 
+are *primarily* either common mode or differential mode. For a LISN-mate that gives you an
+answer on that issue, all it takes is a transformer.
 
 The design is in KiCAD. Gerber files for the PCB are provided as well. The components are:
 
