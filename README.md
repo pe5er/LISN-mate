@@ -1,6 +1,7 @@
 # LISN-mate
-This design is for a "LISN mate", suitable for a dual channel LISN. In particular,
-it was designed for the dual DC LISN published in Elektor [2021], and which is
+This design a fork of CompuPhase's "LISN mate", suitable for a dual channel LISN. 
+
+The original design was published in Elektor [2021], and is
 available from the ["elektorstore"](https://www.elektor.com/elektor-dual-dc-lisn-150-khz-200-mhz)
 as a kit.
 
@@ -9,7 +10,10 @@ exceed the limit, and you need to adjust the design to reduce the RF noise, the
 first thing you will want to know is whether the noise is primarily "common mode"
 or "differential mode". The LISN-mate is a tool that tells you that.
 
-![LISN-mate PCB](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_1.jpg)
+There's nothing wrong with the original design, I just had some specific requirements in mind.
+
+![LISN-mate PCB](/pictures/LISN_Mate%20\(Top%20Render.png)
+![LISN-mate PCB](/pictures/LISN_Mate%20(Bottom%20Render).png)
 
 When you want a quantitative value for the common mode noise and/or the differential
 mode noise (in dB&micro;V), a LISN-mate is actually somewhat complex circuit. 
@@ -18,23 +22,15 @@ so you do not really need the absolute values. What you need to know, whether th
 are *primarily* either common mode or differential mode. For a LISN-mate that gives you an
 answer on that issue, all it takes is a transformer.
 
-The design is in KiCAD. Gerber files for the PCB are provided as well. The components are:
+The design is in Altium. Gerber files for the PCB are provided as well. The components are:
 
-| Number | Part number | Manufacturer  | Description                             |
-| ------ | ----------- | ------------- | --------------------------------------- |
-|  1     | ADT1-6T     | Mini-Circuits | RF Transformer 50 Ohm, 30 kHz - 125 MHz |
-|  4     | 132289      | Amphenol      | SMA receptable, edge-mount              |
-|  1     | 4607        | Adafruit      | Copper foil, 0.1 mm thick               |
+| Number | Part number          | Manufacturer          | Description                             |
+| ------ | -------------------- | --------------------- | --------------------------------------- |
+|  1     | ADT1-6T              | Mini-Circuits         | RF Transformer 50 Ohm, 30 kHz - 125 MHz |
+|  4     | 60312242114510       | Würth Elektronik      | SMA receptable, edge-mount              |
+|  1     | 1457C802EBK          | Hammond Enclosures    | Enclosure, extrusion cut down to fit    |
 
-Since the case is in plastic, and therefore not shielded, I added a shield from
-copper foil. It is soldered onto the SMA connectors.
-
-![LISN-mate PCB](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_2.jpg)
-
-The case is 3D printed; an STL file is provided. The design is in OpenSCAD (and
-provided as well).
-
-![LISN-mate case](https://github.com/compuphase/LISN-mate/blob/main/pictures/LISN_mate_4.jpg)
+The enclosure is not the correct length, so you must cut down the extrusion to fit!
 
 ## License
 
@@ -52,9 +48,3 @@ Under the following terms:
 > **NonCommercial** - You may not use the material for commercial purposes.  <br>
 > **ShareAlike** - If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original. <br>
 > **No additional restrictions** - You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-### Acknowledgement
-
-For the 3D printed case, this project uses the [Chamfered primitives for OpenSCAD v1.2](https://github.com/SebiTimeWaster/Chamfers-for-OpenSCAD) by TimeWaster,
-which is published under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 licence.
-
